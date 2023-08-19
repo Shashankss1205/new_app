@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter SDG',
       theme: ThemeData(
-          brightness: Brightness.dark
+          brightness: Brightness.dark,
       ),
       home: const HomeScreen(),
     );

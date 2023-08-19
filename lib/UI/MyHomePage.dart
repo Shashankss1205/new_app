@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             padding: const EdgeInsets.only(left: 10),
             child: const CircleAvatar(
-            backgroundImage: AssetImage('Images/profile.png'),
+            backgroundImage: AssetImage('images/profile.png'),
         ),
           ),
         title: const Text("My Notes App", style: TextStyle(fontSize: 30 , fontWeight: FontWeight.bold,) ),
@@ -38,10 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         onPressed: (){
           Navigator.of(context).push(MaterialPageRoute(builder: (context)=> CreateNote(onNewNoteCreated: onNewNoteCreated,)));
         },
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add, color: Colors.black, size: 45,),
       ),
     );
   }

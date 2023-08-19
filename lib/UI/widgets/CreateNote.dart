@@ -19,7 +19,7 @@ class _CreateNoteState extends State<CreateNote> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('New Note'),
+        title: const Text('Add A New Note'),
       ),
 
       body: Padding(
@@ -44,7 +44,7 @@ class _CreateNoteState extends State<CreateNote> {
               ),
               decoration: const InputDecoration(
                   border: InputBorder.none,
-                  hintText: "Your Story"
+                  hintText: "Your Note"
               ),
             ),
           ],
@@ -52,6 +52,7 @@ class _CreateNoteState extends State<CreateNote> {
       ),
 
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         onPressed: (){
           if(titleController.text.isEmpty){
             return;
@@ -68,7 +69,7 @@ class _CreateNoteState extends State<CreateNote> {
           widget.onNewNoteCreated(note);
           Navigator.of(context).pop();
         },
-        child: const Icon(Icons.save),
+        child: const Icon(Icons.save, color: Colors.black,size: 30,),
       ),
     );
   }
